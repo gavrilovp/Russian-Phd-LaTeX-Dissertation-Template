@@ -1,0 +1,3 @@
+[submodule "biblio/bib"]
+	path = biblio/bib
+	url = git://github.com/gavrilovp/bib
