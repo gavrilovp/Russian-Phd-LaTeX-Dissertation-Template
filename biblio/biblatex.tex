@@ -57,6 +57,7 @@ sorting=none,% настройка сортировки списка литера
 \addbibresource[label=vak]{biblio/authorpapersVAK.bib}
 \addbibresource[label=papers]{biblio/authorpapers.bib}
 \addbibresource[label=conf]{biblio/authorconferences.bib}
+\addbibresource[label=myother]{biblio/bib/bibliography.bib}
 
 
 %http://tex.stackexchange.com/a/141831/79756
@@ -101,6 +102,10 @@ sorting=none,% настройка сортировки списка литера
         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
             \perdatasource{biblio/othercites.bib}
             \step[fieldset=keywords, fieldvalue={biblioother,bibliofull}]
+        }
+        \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
+            \perdatasource{biblio/bib/bibliography.bib}
+            \step[fieldset=keywords, fieldvalue={bibliomyother,bibliofull}]
         }
         \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
             \perdatasource{biblio/authorpapersVAK.bib}
@@ -352,3 +357,6 @@ sorting=none,% настройка сортировки списка литера
 \printbibliography[heading=otherpublications,keyword=biblioother]
 }
 
+\newcommand*{\insertbibliomyother}{
+\printbibliography[heading=myotherpublications,keyword=bibliomyother]
+}
